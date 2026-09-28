@@ -1,0 +1,21 @@
+public class Peso extends Entreno {
+
+    private double kilos;
+    private int repeticiones;
+
+    public Peso(String nombre, double kilos, int series, int repeticiones, int rir) {
+        super(nombre, series, rir);
+        this.kilos = kilos;
+        this.repeticiones = repeticiones;
+    }
+
+    @Override
+    public double calcularEsfuerzo() {
+        return kilos * getSeries() * repeticiones;
+    }
+
+    @Override
+    public double getUmbralVolumenAlto() {
+        return 3000; // kg
+    }
+}

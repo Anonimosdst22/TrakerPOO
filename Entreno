@@ -1,0 +1,30 @@
+public abstract class Entreno {
+
+    private String nombre;
+    private int series;
+    private int rir; // repeticiones en reserva (0 = fallo)
+
+    public Entreno(String nombre, int series, int rir) {
+        this.nombre = nombre;
+        this.series = series;
+        this.rir = rir;
+    }
+
+    // Cada hija lo calcula distinto
+    public abstract double calcularEsfuerzo();
+
+    // Cada hija define cuánto es "volumen alto" para ella
+    public abstract double getUmbralVolumenAlto();
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getSeries() {
+        return series;
+    }
+
+    public int getRir() {
+        return rir;
+    }
+}
